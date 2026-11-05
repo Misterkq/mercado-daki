@@ -1,0 +1,1510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+/* =========================
+   Fundo animado 
+========================= */
+
+.fundo {
+    position: absolute;
+    top: 0px;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: white;
+
+    transition: background-image 0.8s ease-in-out;
+
+    z-index: 0;
+}
+
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+header {
+    position: relative;
+    z-index: 100;
+}
+
+
+/* =========================
+  Minha primeira barra - daki 
+========================= */
+
+.barra-topo {
+    width: 100%;
+    height: 70px;
+
+    background-color: #eb1414;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 40px;
+
+    position: relative;
+    z-index: 10;
+}
+
+.barra-topo h1 {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   Minha segunda barra - onde vai aparecer os topicos
+========================= */
+
+.sobre-barra {
+    width: 100%;
+    height: 50px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px none #ddd;
+
+    position: relative;
+    z-index: 20;
+}
+
+
+/* =========================
+   os meus menu
+========================= */
+
+.item-menu {
+    position: relative;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    cursor: pointer;   
+}
+
+
+/* Texto do menu */
+
+.item-menu > span {
+    font-size: 15px;
+    color: #222;
+
+    white-space: nowrap;
+
+}
+
+
+/* Efeito ao passar o mouse */
+
+.item-menu:hover {
+    background-color: #f5f5f5;
+}
+
+.item-menu:hover > span {
+    color: #e31313;
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+    display: none;
+
+    position: absolute;
+
+    top: 50px;
+    left: 0;
+
+    min-width: 220px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    z-index: 1000;
+}
+
+
+/* Links dentro do dropdown */
+
+.dropdown a {
+    display: block;
+
+    padding: 12px 15px;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* Hover dos links */
+
+.dropdown a:hover {
+    background-color: #f2f2f2;
+
+    color: #e31313;
+}
+
+
+/* =========================
+   MOSTRAR DROPDOWN
+========================= */
+
+.item-menu:hover .dropdown {
+    display: block;
+}
+
+
+
+
+/* =========================
+   banner - titulo que fica quase no centro
+========================= */
+
+.banner {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+
+    width: 100%;
+    min-height: 390px;
+    padding: 35px 25%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-s\tart;
+
+    text-align: left;
+    font-size: 20px;
+
+    z-index: 1;
+}
+
+.banner p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.banner h1 {
+    font-size: 60px;
+    line-height: 1.05;
+}
+
+.banner h2 {
+    font-size: 24px;
+}
+
+.banner button {
+    position: relative;
+    z-index: 1;
+
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 1px solid #e31313;
+
+    color: white;
+    background-color: #e31313;
+
+    margin-top: 30px;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in;
+}
+
+.banner button:hover {
+    background-color: white;
+    color: #e31313;
+    transform: scale(1.05);
+}
+
+
+
+.beneficios {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: relative;
+    bottom: -50px;
+    left: auto;
+
+    background: #fff;
+    z-index: 1;
+}
+
+.beneficio {
+    flex: 1;
+    padding: 15px 25px;
+
+    border-right: 1px solid #ccc;
+    text-align: left;
+}
+
+.beneficio:last-child {
+    border-right: none;
+}
+
+.beneficio h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.beneficio p {
+    font-size: 13px;
+    color: #555;
+}
+
+.beneficio p a {
+    color: #555;
+    font-weight: 600;  
+
+    transition: all 0.3s ease;
+}
+.beneficio p a:hover {
+    color: #1d4ed8;              
+}
+
+
+/* ==============================
+   Oferta - varios produto aleatorio so para test
+============================== */
+
+.produtos-oferta {
+    width: 100%;
+    padding: 25px 20px;
+    background: #fff;
+    position: relative;
+    margin-top: 100px;
+}
+
+/* Título */
+.produtos-oferta h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 36px;
+}
+
+/* Lista de produtos */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+
+.produto {
+    position: relative;
+    min-width: 0;
+    min-height: 360px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+.produto .pi {
+    background-color: #e31313;
+    width: 50px;
+
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+
+    color: white;
+    font-size: 12px;
+}
+
+.produto img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: contain;
+
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.produto h2 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #f10d16;
+
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+
+.produto button {
+    display: block;
+
+    width: 100%;
+    margin-top: auto;
+    padding: 10px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #000;
+    color: #fff;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.produto button:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+/* BOTÃO COMPRAR OFERTAS */
+
+.compra-oferta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 35px 0 20px;
+    text-align: center;
+}
+
+.compra-oferta button {
+    display: block;
+    margin: 0 auto;
+
+    padding: 10px 35px;
+
+    background-color: #e31313;
+    color: white;
+
+    border: 1px solid #e31313;
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.compra-oferta button:hover {
+    background-color: white;
+    color: #e31313;
+    transform: scale(1.05);
+}
+
+
+/* Adaptação para telas menores */
+@media (max-width: 1000px) {
+    .produtos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .produtos-oferta {
+        padding: 20px 12px;
+    }
+
+    .produto {
+        min-height: 320px;
+        padding: 8px;
+    }
+
+    .produto img {
+        height: 160px;
+    }
+}
+
+
+/* Botão das oferta 2 (comprar ofertas)mano, é isso */
+
+
+.compra-oferta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 35px 0 20px;
+}
+
+.compra-oferta button {
+    padding: 10px 35px;
+
+    background-color: #e31313;
+    color: white;
+
+    border: 1px solid #e31313;
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.compra-oferta button:hover {
+    background-color: white;
+    color: #e31313;
+    transform: scale(1.05);
+}
+
+/* OFERTAS LIMITADA */
+
+.oferta-limitada {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: stretch;
+
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/* ESTILO GERAL DOS CARDS */
+.card-limitede1,
+.card-limitede2 {
+    position: relative;
+    height: 415px;
+
+    overflow: hidden;
+    border-radius: 0;
+
+    flex-shrink: 0;
+
+}
+
+/* CARD GRANDE - VINHO */
+.card-limitede1 {
+    width: 60%;
+    max-width: 690px;
+}
+
+/* CARD MENOR - LIMPEZA */
+.card-limitede2 {
+    width: 30%;
+    max-width: 380px;
+}
+
+/* IMAGENS DE FUNDO */
+.card-limitede1 > img,
+.card-limitede2 > img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* TEXTOS SOBRE AS IMAGENS */
+.texto-imagem {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 35px;
+    box-sizing: border-box;
+
+    color: #000;
+}
+
+/* TÍTULOS */
+.texto-imagem h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.texto-imagem h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.texto-imagem h1 {
+    font-size: clamp(28px, 3.5vw, 55px);
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+/* DESCRIÇÃO DO VINHO */
+.card-limitede1 .texto-imagem p {
+    max-width: 340px;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* BOTÕES   transition: all 0.3s ease;*/
+.texto-imagem button {
+    border: 1px solid #ed1118;
+    border-radius: 25px;
+
+    background: #ed1118;
+    color: white;
+
+    padding: 9px 18px;
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}  
+
+.texto-imagem button:hover {
+    background: white;
+    color: #ed1118;
+}
+
+/* CARD DE LIMPEZA */
+.card-limitede2 .texto-imagem {
+    padding: 25px;
+}
+
+.card-limitede2 .texto-imagem h3 {
+    margin-bottom: 12px;
+}
+
+.card-limitede2 .texto-imagem h1 {
+    font-size: clamp(40px, 5vw, 82px);
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.card-limitede2 .texto-imagem h1 span {
+    font-size: 18px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 12px;
+}
+
+.card-limitede2 .texto-imagem h2 {
+    font-size: 19px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+/* SELO VERMELHO DE OFERTA */
+.selo-oferta {
+    position: absolute;
+    z-index: 3;
+
+    top: 40px;
+    right: 25%;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #ed1118;
+    color: white;
+
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+
+    transform: rotate(12deg);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 800px) {
+    .oferta-limitada {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card-limitede1,
+    .card-limitede2 {
+        width: 100%;
+        max-width: 690px;
+        height: 350px;
+    }
+
+    .card-limitede1 .texto-imagem {
+        padding: 25px;
+    }
+
+    .card-limitede1 .texto-imagem h1 {
+        font-size: 36px;
+    }
+
+    .card-limitede2 .texto-imagem h1 {
+        font-size: 55px;
+    }
+}
+
+/* ==============================
+   CATEGORIAS MAIS VENDIDAS
+============================== */
+
+.categorias {
+    width: 100%;
+    padding: 25px 30px;
+    background-color: #fff;
+}
+
+/* Título da seção */
+.categorias h1 {
+   font-size: 26px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 25px;
+}
+
+/* Grade das categorias */
+.categorias table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Células */
+.categorias th {
+    width: 25%;
+    height: 205px;
+    padding: 25px 10px;
+
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-weight: normal;
+}
+
+/* Remove a borda direita da última coluna */
+.categorias tr th:last-child {
+    border-right: none;
+}
+
+/* Imagens das categorias */
+.categorias th img {
+    width: 105px;
+    height: 105px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: 0 auto 12px;
+
+    /* Círculo bege atrás da imagem */
+    background-color: #fff0d2;
+    border-radius: 50%;
+}
+
+/* Nome das categorias */
+.categorias th h3 {
+    font-size: 11px;
+    font-weight: 600;
+    color: #111;
+
+    margin: 0;
+}
+
+/* Adaptação para tablets */
+@media (max-width: 800px) {
+    .categorias {
+        padding: 20px 15px;
+    }
+
+    .categorias th {
+        height: 175px;
+        padding: 15px 5px;
+    }
+
+    .categorias th img {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+/* Adaptação para celulares */
+@media (max-width: 500px) {
+    .categorias table {
+        table-layout: auto;
+    }
+
+    .categorias th {
+        width: 50%;
+        height: 150px;
+        padding: 12px 4px;
+    }
+
+    .categorias th img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .categorias th h3 {
+        font-size: 10px;
+    }
+
+    .categorias h1 {
+        font-size: 16px;
+    }
+}
+
+
+
+
+/* =========================
+   PRODUTOS - PARTE 2
+========================= */
+
+.produtospt2div {
+    width: 100%;
+    padding: 25px 20px;
+    background: #fff;
+    position: relative;
+    margin-top: 100px;
+}
+
+/* TÍTULO */
+.produtospt2div h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 36px;
+}
+
+/* LISTA DE PRODUTOS */
+.produtospt2 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+/* CARD DO PRODUTO */
+.produtopt2 {
+    position: relative;
+    min-width: 0;
+    min-height: 360px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* IMAGENS */
+.produtopt2 img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: contain;
+
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+/* PREÇOS */
+.produtopt2 h2 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #f10d16;
+
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO ADICIONAR */
+.produtopt2 button {
+    display: block;
+
+    width: 100%;
+    margin-top: auto;
+    padding: 10px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #000;
+    color: #fff;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.produtopt2 button:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+.produtopt2button button {
+    display: block;
+    margin: 0 auto;
+
+    padding: 10px 35px;
+
+    background-color: #e31313;
+    color: white;
+
+    border: 1px solid #e31313;
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: bold;
+    
+    position: relative;
+    top: 28px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.produtopt2button button:hover {
+    background-color: white;
+    color: #e31313;
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* =========================
+   TELAS MENORES
+========================= */
+
+@media (max-width: 1000px) {
+    .produtospt2 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .produtospt2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .produtospt2div {
+        padding: 20px 12px;
+    }
+
+    .produtopt2 {
+        min-height: 320px;
+        padding: 8px;
+    }
+
+    .produtopt2 img {
+        height: 160px;
+    }
+}
+
+
+
+/* =========================
+     Apresentando mais sobre o produtos
+========================= */
+
+
+
+.container {
+    position: relative;
+
+    width: 100%;
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+
+    padding: 30px 40px;
+    margin-top: 50px;
+
+    box-sizing: border-box;
+    overflow: visible; 
+    background: #333;
+
+  
+    border-radius: 24px; 
+}
+
+
+.imagem-fundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.imagem-fundo img {
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 130%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: left center;
+
+    filter: brightness(0.55);
+    border-radius: inherit;
+
+    will-change: transform;
+}
+
+
+/* CELULAR À ESQUERDA */
+.sobreimagem {
+    position: relative;
+    z-index: 1;
+
+    width: 250px;
+    height: 500px;
+
+    flex-shrink: 0;
+}
+
+.tela-milho {
+    position: absolute;
+    z-index: 3;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.moldura-celular {
+    position: relative;
+    z-index: 1;
+
+    /* DICA: Ajuste esses valores negativos para controlar o quanto ele passa para baixo */
+    bottom: 73px; 
+    right: 79px;
+
+    width: 160%;
+    height: 150%;
+
+    object-fit: contain;
+    pointer-events: none;
+
+    filter: drop-shadow(0px 15px 12px rgba(0, 0, 0, 0.4));
+}
+
+/* TEXTO À DIREITA */
+.texto-celular {
+    position: relative;
+    z-index: 2;
+
+    width: 520px;
+    max-width: 55%;
+
+    color: white;
+}
+
+.texto-celular h3 {
+    font-size: 25px;
+    margin: 0 0 15px;
+}
+
+.texto-celular h1 {
+    font-size: 65px;
+    line-height: 1.08;
+    margin: 0 0 20px;
+    color: white;
+}
+
+.texto-celular h4 {
+    font-size: 19px;
+    line-height: 1.6;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* TELAS MENORES */
+@media (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 35px 20px;
+        /* Opcional: Se em telas de celular você preferir não deixar vazando para não quebrar o layout mobile */
+        overflow: hidden; 
+    }
+
+    .sobreimagem {
+        width: 210px;
+        height: 420px;
+    }
+
+    .texto-celular {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .texto-celular h1 {
+        font-size: 42px;
+    }
+
+    .texto-celular h3 {
+        font-size: 20px;
+    }
+
+    .texto-celular h4 {
+        font-size: 16px;
+    }
+}
+
+
+
+/* =========================
+    MELHORES OFERTA
+========================= */
+
+.mais-vendido {
+    width: 100%;
+    padding: 25px 20px;
+    background: #fff;
+    position: relative;
+    margin-top: 100px;
+}
+
+/* Título */
+.mais-vendido h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 36px;
+}
+
+/* Lista de produtos */
+.vendidos {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+
+.vendido {
+    position: relative;
+    min-width: 0;
+    min-height: 360px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+.vendido .pi {
+    background-color: #e31313;
+    width: 50px;
+
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+
+    color: white;
+    font-size: 12px;
+}
+
+.vendido img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: contain;
+
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.vendido h2 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #f10d16;
+
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+
+.vendido button {
+    display: block;
+
+    width: 100%;
+    margin-top: auto;
+    padding: 10px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #000;
+    color: #fff;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.vendido button:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+/* BOTÃO  DE MAIS VENDIDO */
+
+.mais-vendidopt4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 35px 0 20px;
+    text-align: center;
+}
+
+.mais-vendidopt4 button {
+    display: block;
+    margin: 0 auto;
+
+    padding: 10px 35px;
+
+    background-color: #e31313;
+    color: white;
+
+    border: 1px solid #e31313;
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mais-vendidopt4 button:hover {
+    background-color: white;
+    color: #e31313;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1000px) {
+    .vendidos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .vendidos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .mais-vendido {
+        padding: 20px 12px;
+    }
+
+    .vendido {
+        min-height: 320px;
+        padding: 8px;
+    }
+
+    .vendido img {
+        height: 160px;
+    }
+}
+
+
+/* =========================
+    CARD DE OFERTA PARTE 2
+========================= */
+
+
+
+.oferta-limitadapt2 {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: stretch;
+
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/* ESTILO GERAL DOS CARDS */
+.card-limitede1pt2,
+.card-limitede2pt2 {
+    position: relative;
+    height: 415px;
+
+    overflow: hidden;
+    border-radius: 0;
+
+    flex-shrink: 0;
+
+}
+
+/* CARD GRANDE - VINHO */
+.card-limitede1pt2 {
+    width: 60%;
+    max-width: 690px;
+}
+
+/* CARD MENOR - LIMPEZA */
+.card-limitede2pt2 {
+    width: 30%;
+    max-width: 380px;
+}
+
+/* IMAGENS DE FUNDO */
+.card-limitede1pt2 > img,
+.card-limitede2pt2 > img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* TEXTOS SOBRE AS IMAGENS */
+.texto-imagempt2 {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 35px;
+    box-sizing: border-box;
+
+    color: #000;
+}
+
+/* TÍTULOS */
+.texto-imagempt2 h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.texto-imagempt2 h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.texto-imagempt2 h1 {
+    font-size: clamp(28px, 3.5vw, 55px);
+    line-height: .999;
+    
+    margin-bottom: 8px;
+}
+
+
+.card-limitede1pt2 .texto-imagem p {
+    max-width: 340px;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* BOTÕES   transition: all 0.3s ease;*/
+.texto-imagempt2 button {
+    border: 1px solid #ed1118;
+    border-radius: 25px;
+
+    background: #ed1118;
+    color: white;
+
+    padding: 9px 18px;
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}  
+
+.texto-imagempt2 button:hover {
+    background: white;
+    color: #ed1118;
+}
+
+
+.card-limitede2pt2 .texto-imagem {
+    padding: 25px;
+}
+
+.card-limitede2pt2 .texto-imagem h3 {
+    margin-bottom: 12px;
+}
+
+.card-limitede2pt2 .texto-imagempt2 h1 {
+    font-size: clamp(40px, 5vw, 82px);
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.card-limitede2pt2 .texto-imagempt2 h1 span {
+    font-size: 18px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 12px;
+}
+
+.card-limitede2pt2 .texto-imagempt2 h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+/* SELO VERMELHO DE OFERTA */
+.selo-ofertapt2 {
+    position: absolute;
+    z-index: 3;
+
+    top: 40px;
+    right: 10%;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #ed1118;
+    color: white;
+
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+
+    transform: rotate(12deg);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 800px) {
+    .oferta-limitada {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card-limitede1pt2,
+    .card-limitede2pt2 {
+        width: 100%;
+        max-width: 690px;
+        height: 350px;
+    }
+
+    .card-limitede1pt2 .texto-imagempt2 {
+        padding: 25px;
+    }
+
+    .card-limitede1pt2 .texto-imagempt2 h1 {
+        font-size: 36px;
+    }
+
+    .card-limitede2pt2 .texto-imagempt2 h1 {
+        font-size: 55px;
+    }
+}
